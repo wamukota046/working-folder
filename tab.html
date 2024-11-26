@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Side bar</title>
+        <style>
+
+            #side{
+                width:300px;
+                height:100%;
+                z-index:1;
+                color:white;
+                background-color:green;
+                padding:5px;
+                left:0;
+            position:absolute;
+        bottom:0;}
+           ul{list-style-type: none;}
+           li{padding: 10px;} 
+           li:hover{color:green;
+        background-color: white;}
+        input[type=button]{z-index:2;
+        position: absolute;
+       left:0;top:0;
+    }
+        </style>
+    </head>
+    <body>            <input type="button" id="button" value="close" onclick="valid()"
+        ondblclick="validate()">
+        <div id="side">
+
+            <ul id="list">
+              <li>Dashboard</li>
+              <li>User</li>
+              <li>Stats</li>
+              <li>Settings</li>
+              
+          </ul>
+      
+
+        </div>
+        <script>
+            function valid(){
+var a=document.getElementById("side").style;
+a.display="none";
+var b=document.getElementById("button");
+b.value="open";
+
+}
+function validate(){
+    var a=document.getElementById("side").style;
+a.display="flex";
+
+var b=document.getElementById("button");
+b.value="close";
+}
+
+        </script>
+    </body>
+</html>
